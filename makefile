@@ -5,10 +5,6 @@
 # This target is executed whenever we just type `make`
 .DEFAULT_GOAL = setup
 
-# The location of the current working directory
-PWD=$(shell pwd)
-F_EFN=${PWD}/egvt.sfopal5h5
-
 # The @ makes sure that the command itself isn't echoed in the terminal
 setup:
 	@mkdir eig_files
@@ -24,9 +20,9 @@ setup:
 	@echo "---------------------------------------------------------------------"
 
 help:
-	@echo "---------------HELP-----------------"
+	@echo "----------------------------HELP---------------------------"
 	@echo "To generate and store Solar Eigenfunctions type: make setup"
-	@echo "------------------------------------"
+	@echo "-----------------------------------------------------------"
 
 clean:
 	@rm -r eig_files
