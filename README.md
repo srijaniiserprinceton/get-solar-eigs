@@ -1,5 +1,7 @@
 # get-solar-eigs
 
+** There is no need to clone or fork this repository. Just download it **
+
 Repository contains fortran and python script for generating Solar Eigenfunctions and other necessary files to work with eigenfunctions and eigenfrequencies.
 
 Local directory should contain the following data files:
