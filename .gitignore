@@ -2,3 +2,7 @@ egvt.sfopal5h5
 sfopal5h5
 data_files
 eig_files
+__pycache__
+.DS_Store
+.config
+.dl_files

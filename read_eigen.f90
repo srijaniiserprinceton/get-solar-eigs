@@ -22,7 +22,7 @@ program READ_EIGENFUNC
     max_l = 300 !I know this because I printed the results
 
     !reading this file first to fetch the value of nr -- the number of radial grids
-    open(99, file='egvt.sfopal5h5', form='unformatted', status='old')
+    open(99, file='./dlfiles/egvt.sfopal5h5', form='unformatted', status='old')
     read(99)
     read(99) arr
 
@@ -37,7 +37,7 @@ program READ_EIGENFUNC
                                                 & nl_array(2,max_l))
 
     !reading file that contains miscellaneous physical quantities
-    open(199, file='sfopal5h5', form='unformatted', status='old')
+    open(199, file='./dlfiles/sfopal5h5', form='unformatted', status='old')
     read(199)
     read(199) arr2
     

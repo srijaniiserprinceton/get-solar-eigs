@@ -2,8 +2,13 @@ import numpy as np
 import os
 #import matplotlib.pyplot as plt
 
+# importing files containing the global variables
+import globalvars as GV
+# reading global variables --- user-dependent
+gvar = GV.globalVars()
+
 cwd = os.getcwd()
-sd = cwd + '/eig_files' #storage directory
+sd = f'{gvar.eigdir}' #storage directory
 
 if(os.path.isdir(sd) == False):	os.mkdir(sd)
 
