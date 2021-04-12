@@ -17,8 +17,8 @@ nl = np.zeros((len(n),2),dtype='int')
 nl[:,0] = n
 nl[:,1] = ell
 
-np.savetxt('eig_U.dat', ksir)
-np.savetxt('eig_V.dat', etar)
+np.savetxt('eigU.dat', ksir)
+np.savetxt('eigV.dat', etar)
 np.savetxt('nl.dat', nl)
 
 

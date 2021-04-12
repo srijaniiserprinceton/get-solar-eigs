@@ -53,6 +53,7 @@ def create_makefile():
     f.write("clean:\n")
     f.write(f"\t@rm -rf {datadir}/snrnmais_files\n")
     f.write(f"\t@rm -rf {dldir}\n")
+    f.write(f"\t@rm *.csv\n")
     # f.write(f"\t@rm -rf *.egg-info\n")
     return None
 
@@ -104,6 +105,7 @@ if __name__ == "__main__":
     create_dir(datadir)
     create_dir(snrdir)
     create_dir(dldir)
+    create_dir(f"{datadir}/data/w_s")
     # temporary directory to be deleted later
     # this is already created because of git cloning in the make file
     with open(f"{cwd}/.config", "w") as f:
