@@ -17,6 +17,7 @@ setup:
 	@python /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/write_w.py
 	@rm /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/data/w_s/w_samarth.dat
 	@rm -rf /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/dlfiles
+	@rm *.csv
 	@echo '---------------------------------------------------------------------'
 	@echo '       Eigenfrequency and Eigenfunciton SUCCESSFULLY GENERATED       '
 	@echo '---------------------------------------------------------------------'
@@ -28,4 +29,3 @@ help:
 clean:
 	@rm -rf /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/snrnmais_files
 	@rm -rf /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/dlfiles
-	@rm *.csv

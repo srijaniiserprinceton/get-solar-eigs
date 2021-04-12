@@ -43,6 +43,7 @@ def create_makefile():
     f.write(f"\t@python {datadir}/write_w.py\n")
     f.write(f"\t@rm {datadir}/data/w_s/w_samarth.dat\n")
     f.write(f"\t@rm -rf {datadir}/dlfiles\n")
+    f.write(f"\t@rm *.csv\n")
     f.write("\t@echo '---------------------------------------------------------------------'\n")
     f.write("\t@echo '       Eigenfrequency and Eigenfunciton SUCCESSFULLY GENERATED       '\n")
     f.write("\t@echo '---------------------------------------------------------------------'\n")
@@ -53,7 +54,6 @@ def create_makefile():
     f.write("clean:\n")
     f.write(f"\t@rm -rf {datadir}/snrnmais_files\n")
     f.write(f"\t@rm -rf {dldir}\n")
-    f.write(f"\t@rm *.csv\n")
     # f.write(f"\t@rm -rf *.egg-info\n")
     return None
 

@@ -33,11 +33,12 @@ ksir_fname='./ksir.csv'
 etar_fname='./etar.csv'
 lmode_fname='./l.csv'
 nmode_fname='./n.csv'
+r_fname='./r.csv'
 
 write_csv, ksir_fname, ksir
 write_csv, etar_fname, etar
 write_csv, lmode_fname, lmode
 write_csv, nmode_fname, nmode
-
+write_csv, r_fname, mesh
 end
 

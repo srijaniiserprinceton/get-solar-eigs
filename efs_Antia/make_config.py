@@ -106,6 +106,7 @@ if __name__ == "__main__":
     create_dir(datadir)
     create_dir(snrdir)
     create_dir(dldir)
+    create_dir(f"{datadir}/data/w_s")
     # temporary directory to be deleted later
     # this is already created because of git cloning in the make file
     with open(f"{cwd}/.config", "w") as f:

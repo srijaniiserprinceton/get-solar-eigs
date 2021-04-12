@@ -5,3 +5,4 @@ eig_files
 __pycache__
 .DS_Store
 .config
+efs_*/data/w_s
