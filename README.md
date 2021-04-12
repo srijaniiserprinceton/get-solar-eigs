@@ -16,6 +16,11 @@ Enter the directory ```get-solar-eigs```
 ```
 cd get-solar-eigs
 ```
+We recommend creating the ```helio``` environment from the ```environment.yml``` (incase all the dependencies are not already in your current conda environment), 
+```
+conda env create -f environment.yml
+conda activate helio
+```
 Depending on whether you want to use HMA or JS eigenfunction and eigenfrequencies you should choose ```efs_Antia``` or ```efs_jesper``` respectively. Lets say you choose ```efs_Antia```. In that case, simply enter the directory ```efs_Antia``` and run the python code ```make_config.py``` as follows
 ```
 cd efs_Antia
