@@ -1,0 +1,16 @@
+name: helio
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.7
+  - numpy
+  - scipy
+  - ipython
+  - matplotlib
+  - astropy
+  - sympy
+  - pip
+  - emcee
+  - py3nj
+  - wigner
