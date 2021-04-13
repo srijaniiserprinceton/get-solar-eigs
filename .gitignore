@@ -6,3 +6,4 @@ __pycache__
 .DS_Store
 .config
 efs_*/data/w_s
+efs_*/makefile
