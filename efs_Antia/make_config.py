@@ -45,6 +45,8 @@ def create_makefile():
     f.write(f"\t@python {datadir}/write_w.py\n")
     f.write(f"\t@rm {datadir}/data/w_s/w_samarth.dat\n")
     f.write(f"\t@rm -rf {datadir}/dlfiles\n")
+    f.write(f"\t@rm {snrdir}/data_files/eigU.dat\n")
+    f.write(f"\t@rm {snrdir}/data_files/eigV.dat\n")
     f.write("\t@echo '---------------------------------------------------------------------'\n")
     f.write("\t@echo '       Eigenfrequency and Eigenfunciton SUCCESSFULLY GENERATED       '\n")
     f.write("\t@echo '---------------------------------------------------------------------'\n")
