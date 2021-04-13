@@ -18,6 +18,8 @@ setup:
 	@rm /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/data/w_s/w_samarth.dat
 	@rm -rf /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/dlfiles
 	@rm *.csv
+	@rm /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/snrnmais_files/data_files/eigU.dat
+	@rm /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/snrnmais_files/data_files/eigV.dat
 	@echo '---------------------------------------------------------------------'
 	@echo '       Eigenfrequency and Eigenfunciton SUCCESSFULLY GENERATED       '
 	@echo '---------------------------------------------------------------------'

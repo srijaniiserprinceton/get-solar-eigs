@@ -34,11 +34,13 @@ etar_fname='./etar.csv'
 lmode_fname='./l.csv'
 nmode_fname='./n.csv'
 r_fname='./r.csv'
+nu_fname='./muhz.csv'
 
 write_csv, ksir_fname, ksir
 write_csv, etar_fname, etar
 write_csv, lmode_fname, lmode
 write_csv, nmode_fname, nmode
 write_csv, r_fname, mesh
+write_csv, nu_fname, numode
 end
 
