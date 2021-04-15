@@ -1,5 +1,6 @@
 import numpy as np
 import os
+from scipy.integrate import simps
 #import matplotlib.pyplot as plt
 
 # importing files containing the global variables
