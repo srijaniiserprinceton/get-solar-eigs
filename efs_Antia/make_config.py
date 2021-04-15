@@ -104,6 +104,17 @@ def download_files():
 if __name__ == "__main__":
     datadir = input(f"Enter location to store the eigenfunctions and output files:" +
                     f"Default: {cwd} -- ") or f"{cwd}"
+    get_scaled_efs = input(f"Do you want to use scaled (with sqt(rho)*r) eigenfunctions (y/n):")
+
+    while(True):
+        if(get_scaled_efs == 'y' or get_scaled_efs == 'Y'): 
+            scale = True
+            break
+        elif(get_scaled_efs == 'n' or get_scaled_efs == 'N'):
+            scale = False
+            break
+        else: continue
+
     dldir = f"{datadir}/dlfiles"
     snrdir = f"{datadir}/snrnmais_files"
     create_dir(datadir)
@@ -114,7 +125,9 @@ if __name__ == "__main__":
     # this is already created because of git cloning in the make file
     with open(f"{cwd}/.config", "w") as f:
         f.write(f"{cwd}{NL}")
-        f.write(f"{datadir}")
+        f.write(f"{datadir}{NL}")
+        if(scale): f.write("scaled")
+        else: f.write("unscaled")
 
     download_files()
     create_makefile()
