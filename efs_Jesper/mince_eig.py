@@ -1,6 +1,11 @@
 import numpy as np
 import os
+import sys
+from scipy.integrate import simps
 #import matplotlib.pyplot as plt
+
+cwd = os.getcwd()
+sys.path.append(cwd)
 
 # importing files containing the global variables
 import globalvars as GV
@@ -12,10 +17,10 @@ sd = f'{gvar.eigdir}' #storage directory
 
 if(os.path.isdir(sd) == False):	os.mkdir(sd)
 
-nl = np.loadtxt('nl.dat')
-U_list = np.loadtxt('eigU.dat')
-V_list = np.loadtxt('eigV.dat')
-r = np.loadtxt('r.dat')
+nl = np.loadtxt(f'{gvar.snrnmais}/data_files/nl.dat')
+U_list = np.loadtxt(f'{gvar.snrnmais}/data_files/eigU.dat')
+V_list = np.loadtxt(f'{gvar.snrnmais}/data_files/eigV.dat')
+r = np.loadtxt(f'{gvar.snrnmais}/data_files/r.dat')
 mode_count = len(nl)
 
 l_pres = 0
