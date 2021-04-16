@@ -6,17 +6,19 @@
 .DEFAULT_GOAL = setup
 # The @ makes sure that the command itself isnt echoed in the terminal
 setup:
-	@tar -xf /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Jesper/dlfiles/efs_Jesper.tar.gz
-	@rm -rf /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Jesper/snrnmais_files/data_files/w_s
-	@python /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Jesper/mince_eig.py
-	@mv /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Jesper/dlfiles/w_samarth.dat /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Jesper/data/w_s/.
+	@mkdir /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/snrnmais_files/eig_files
+	@mkdir /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/snrnmais_files/data_files
+	@idl -e "efs"
+	@python /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/read_csv_python.py
+	@python /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/mince_eig.py
+	@mv *.dat /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/snrnmais_files/data_files/.
+	@mv /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/dlfiles/w_samarth.dat /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/data/w_s/.
 	# generating the w_s data from data/w_s/w_samarth.dat
-	@python /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Jesper/write_w.py
-	@rm /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Jesper/data/w_s/w_samarth.dat
-	@mv /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Jesper/data/w_s /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Jesper/snrnmais_files/data_files/.
-	@rm -rf /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Jesper/dlfiles
-	@rm /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Jesper/snrnmais_files/data_files/eigU.dat
-	@rm /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Jesper/snrnmais_files/data_files/eigV.dat
+	@python /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/write_w.py
+	@rm /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/data/w_s/w_samarth.dat
+	@mv /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/data/w_s /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/snrnmais_files/data_files/.
+	@rm -rf /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/dlfiles
+	@rm *.csv
 	@echo '---------------------------------------------------------------------'
 	@echo '       Eigenfrequency and Eigenfunciton SUCCESSFULLY GENERATED       '
 	@echo '---------------------------------------------------------------------'
@@ -26,6 +28,5 @@ help:
 	@echo '-------------------------------------------------------------------'
 
 clean:
-	@rm -rf /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Jesper/snrnmais_files
-	@rm -rf /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Jesper/dlfiles
-	@rm -rf /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Jesper/data/w_s
+	@rm -rf /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/snrnmais_files
+	@rm -rf /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper/dlfiles
