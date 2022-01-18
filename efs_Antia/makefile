@@ -6,21 +6,21 @@
 .DEFAULT_GOAL = setup
 # The @ makes sure that the command itself isnt echoed in the terminal
 setup:
-	@mkdir /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/snrnmais_files/eig_files
-	@mkdir /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/snrnmais_files/data_files
-	@gfortran /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/read_eigen.f90
-	@/Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/a.out
-	@rm /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/a.out
-	@python /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/mince_eig.py
-	@mv *.dat /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/snrnmais_files/data_files/.
-	@mv /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/dlfiles/w_samarth.dat /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/data/w_s/.
+	@mkdir /scratch/g.samarth/get-solar-eigs/efs_Antia/snrnmais_files/eig_files
+	@mkdir /scratch/g.samarth/get-solar-eigs/efs_Antia/snrnmais_files/data_files
+	@gfortran /scratch/g.samarth/get-solar-eigs/efs_Antia/read_eigen.f90
+	@/scratch/g.samarth/get-solar-eigs/efs_Antia/a.out
+	@rm /scratch/g.samarth/get-solar-eigs/efs_Antia/a.out
+	@python /scratch/g.samarth/get-solar-eigs/efs_Antia/mince_eig.py
+	@mv *.dat /scratch/g.samarth/get-solar-eigs/efs_Antia/snrnmais_files/data_files/.
+	@mv /scratch/g.samarth/get-solar-eigs/efs_Antia/dlfiles/w_samarth.dat /scratch/g.samarth/get-solar-eigs/efs_Antia/data/w_s/.
 	# generating the w_s data from data/w_s/w_samarth.dat
-	@python /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/write_w.py
-	@rm /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/data/w_s/w_samarth.dat
-	@mv /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/data/w_s /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/snrnmais_files/data_files/.
-	@rm -rf /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/dlfiles
-	@rm /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/snrnmais_files/data_files/eigU.dat
-	@rm /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/snrnmais_files/data_files/eigV.dat
+	@python /scratch/g.samarth/get-solar-eigs/efs_Antia/write_w.py
+	@rm /scratch/g.samarth/get-solar-eigs/efs_Antia/data/w_s/w_samarth.dat
+	@mv /scratch/g.samarth/get-solar-eigs/efs_Antia/data/w_s /scratch/g.samarth/get-solar-eigs/efs_Antia/snrnmais_files/data_files/.
+	@rm -rf /scratch/g.samarth/get-solar-eigs/efs_Antia/dlfiles
+	@rm /scratch/g.samarth/get-solar-eigs/efs_Antia/snrnmais_files/data_files/eigU.dat
+	@rm /scratch/g.samarth/get-solar-eigs/efs_Antia/snrnmais_files/data_files/eigV.dat
 	@echo '---------------------------------------------------------------------'
 	@echo '       Eigenfrequency and Eigenfunciton SUCCESSFULLY GENERATED       '
 	@echo '---------------------------------------------------------------------'
@@ -30,5 +30,5 @@ help:
 	@echo '-------------------------------------------------------------------'
 
 clean:
-	@rm -rf /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/snrnmais_files
-	@rm -rf /Users/srijanbharatidas/Documents/Research/Codes/Helioseismology/get-solar-eigs/efs_Antia/dlfiles
+	@rm -rf /scratch/g.samarth/get-solar-eigs/efs_Antia/snrnmais_files
+	@rm -rf /scratch/g.samarth/get-solar-eigs/efs_Antia/dlfiles

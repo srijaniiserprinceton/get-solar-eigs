@@ -10,7 +10,7 @@ gvar = GV.globalVars()
 OM = gvar.OM #importing normalising frequency value from file (in Hz (cgs))
 r = np.loadtxt(f'{gvar.snrnmais}/data_files/r.dat')
 
-w_file = np.loadtxt(f'{gvar.datadir}/w_s/w_samarth.dat')
+w_file = np.loadtxt(f'../w_samarth.dat')
 
 r_w = (w_file)[0]
 w_1 = -(w_file)[1]
@@ -38,4 +38,4 @@ w[2] = w5_f
 w *= (1e-9 / OM) #w normalising w to natural units of velocity R_sol*OM
 
 # saving in the same directory
-np.savetxt(f'{gvar.local_dir}/data/w_s/w.dat', w)
+np.savetxt(f'./w.dat', w)
