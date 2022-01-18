@@ -22,9 +22,6 @@ def create_makefile():
     f.write("setup:\n")
     f.write(f"\t@mkdir {snrdir}/eig_files\n")
     f.write(f"\t@mkdir {snrdir}/data_files\n")
-    f.write(f"\t@gfortran {cwd}/read_eigen.f90\n")
-    f.write(f"\t@{cwd}/a.out\n")
-    f.write(f"\t@rm {cwd}/a.out\n")
     f.write(f"\t@python {cwd}/mince_eig.py\n")
     f.write(f"\t@mv *.dat {snrdir}/data_files/.\n")
     f.write(f"\t@mv {dldir}/w_samarth.dat {datadir}/data/w_s/.\n")
@@ -93,11 +90,12 @@ def download_files():
 
     for url in urlnames:
         filename = url.split('/')[-1]
-        # for dropbox downloads, filename is of the form /path/to/file/fname.ext?dl=1
-        filename = filename.split('?')[0] 
+        # for ftp downloads, filename is of the form /path/to/file/fname.ext
         print(f"Downloading {url} to {dldir}/{filename}")
         urllib.request.urlretrieve(url, f"{dldir}/{filename}")
         urlsave(url, f"{dldir}/{filename}")
+
+    os.system(f"tar -xvzf {dldir}/{filename} --directory {dldir}/")
     return None
 
 
@@ -126,9 +124,10 @@ if __name__ == "__main__":
     with open(f"{cwd}/.config", "w") as f:
         f.write(f"{cwd}{NL}")
         f.write(f"{datadir}{NL}")
-        if(scale): f.write("scaled")
-        else: f.write("unscaled")
+        if(scale): f.write(f"scaled{NL}")
+        else: f.write(f"unscaled{NL}")
+        f.write("adiabatic")
 
     download_files()
-    create_makefile()
-    os.system("make")
+#    create_makefile()
+#    os.system("make")

@@ -67,7 +67,7 @@ def read_eigenfunctions(ell, n, idx):
     V = fV(r_global)
 
     L = np.sqrt(ell*(ell+1))
-    norm_integrand = U*U + L*L*V*V
+    norm_integrand = U*U.conj() + L*L*V*V.conj()
     norm = simps(norm_integrand, x=r_global)
 
     U = U/np.sqrt(norm)
@@ -76,7 +76,6 @@ def read_eigenfunctions(ell, n, idx):
     np.savetxt(f"{eigdir}/U{idx}.dat", U)
     np.savetxt(f"{eigdir}/V{idx}.dat", V)
     return U, V
-
 
 
 if __name__ == "__main__":
@@ -120,6 +119,7 @@ if __name__ == "__main__":
 
     np.savetxt(f'{datadir}/nl.dat', nl_arr, fmt='%d')
     np.savetxt(f'{datadir}/muhz.dat', omega_arr, fmt='%.18e')
+    np.savetxt(f'{datadir}/r.dat', r_global, fmt='%.18e')
 
     for fcount in tqdm(range(num_files), desc='Creating U, V'):
         n = nl_arr[fcount, 0]
