@@ -32,6 +32,7 @@ class globalVars():
         self.outdir = f"{self.scratch_dir}/output_files"
         self.progdir = self.local_dir
         self.eigdir = f"{self.snrnmais}/eig_files"
+        self.data_filedir = f"{self.snrnmais}/data_files"
 
         #all quantities in cgs
         self.M_sol = 1.989e33 #gn,l = 0,200
