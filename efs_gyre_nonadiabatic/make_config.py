@@ -126,7 +126,7 @@ if __name__ == "__main__":
         f.write(f"{datadir}{NL}")
         if(scale): f.write(f"scaled{NL}")
         else: f.write(f"unscaled{NL}")
-        f.write("adiabatic")
+        f.write("nonadiabatic")
 
     download_files()
 #    create_makefile()

@@ -79,6 +79,7 @@ def read_eigenfunctions(ell, n, idx):
 
 
 if __name__ == "__main__":
+    adiabatic = False
     if eigtype == "adiabatic": adiabatic = True
     outdir = "adiabatic" if adiabatic else "nonadiabatic"
 
@@ -119,6 +120,7 @@ if __name__ == "__main__":
 
     np.savetxt(f'{datadir}/nl.dat', nl_arr, fmt='%d')
     np.savetxt(f'{datadir}/muhz.dat', omega_arr, fmt='%.18e')
+    np.savetxt(f'{datadir}/r.dat', r_global, fmt='%.18e')
 
     for fcount in tqdm(range(num_files), desc='Creating U, V'):
         n = nl_arr[fcount, 0]
