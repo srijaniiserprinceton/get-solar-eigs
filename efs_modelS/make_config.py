@@ -107,6 +107,6 @@ if __name__ == "__main__":
         else: f.write(f"unscaled{NL}")
         f.write("adiabatic")
 
-#    download_files()
+    download_files()
     create_makefile()
-    os.system("make")
+#    os.system("make")
