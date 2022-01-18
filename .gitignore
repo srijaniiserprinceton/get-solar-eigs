@@ -7,3 +7,4 @@ __pycache__
 .config
 efs_*/data/w_s
 efs_*/makefile
+dlfiles
