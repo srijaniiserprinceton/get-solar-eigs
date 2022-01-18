@@ -12,7 +12,7 @@ ef_idx = int(input("Select eigenfunctions (default 0): Enter\n" +
                    "1 - Antia\n" +
                    "2 - ModelS (adiabatic)\n" +
                    "3 - GYRE-model (adiabatic)\n" +
-                   "4 - GYRE-model (nonadiabatic)\n" or "0")
+                   "4 - GYRE-model (nonadiabatic)\n" or "0"))
 if ef_idx == 0:
     os.chdir(f"{cwd}/efs_Jesper")
 elif ef_idx == 1:
@@ -24,3 +24,6 @@ elif ef_idx == 3:
 elif ef_idx == 4:
     os.chdir(f"{cwd}/efs_gyre_nonadiabatic")
 os.system('python make_config.py')
+
+if (ef_idx == 2) or (ef_idx == 3) or (ef_idx == 4):
+    os.system('python mince_eig.py')
