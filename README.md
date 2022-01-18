@@ -6,6 +6,15 @@ User can clone this repository to use solar standard model eigenfunctions that w
 
 The source of the generated data files are hosted in a OneDrive cloud location which is automatically retrieved during the course of running the ```make_config.py``` under ```efs_Antia``` or ```efs_Jesper```. Only the necessary files are retained and the rest is cleaned up automatically to prevent unnecessary memory occupation.
 
+## Scaling and normalization of eigenfunctions
+For ease of reference, let U be the radial eigenfunction and V be the horizontal eigenfunction. 
+* *Unscaled eigenfunction*: U and V are unscaled and are actually the U_{nl}(r) and V_{nl}(r) respectively. This feature is only available in ```efs_Antia``` as of now.
+* *Scaled eigenfunctions*: U and V are scaled by the factor sqrt(rho) * r. This feature is available in both ```efs_Antia``` and ```efs_Jesper```.
+
+The eigenfunctions (scaled or unscaled) are stored after normalization. This means:
+* For unscaled eigenfunctions: Integrating [U * U + l(l+1) * V * V] * rho * r * r over the solar radius should give 1.0.
+* For scaled eigenfunctions: Integrating [U * U + l(l+1) * V * V] over the solar radius should give 1.0.
+
 ## How to use the package
 
 Open the terminal and go to your local directory where you want to clone the repository and use ```git clone``` as follows

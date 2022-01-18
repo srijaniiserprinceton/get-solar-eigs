@@ -9,7 +9,7 @@ ksir=dblarr(2400,nread)
 etar=dblarr(2400,nread)
 lmode=intarr(nread)
 nmode=intarr(nread)
-numode=intarr(nread)
+numode=dblarr(nread)
 openr,1,'./dlfiles/WB-2.1_models_l5bi.d.15_amde.1',/f77_unformatted
 readu,1,nr1,mesh
 for nfunc=0,nread-1 do begin
