@@ -11,6 +11,7 @@ ARGS = parser.parse_args()
 
 compare1 = "Jesper"
 compare2 = "gyre_nonadiabatic"
+eftype_list = ["Jesper", "Antia", "modelS", "gyre_adiabatic", "gyre_nonadiabatic"]
 
 nl1 = np.loadtxt(f"efs_{compare1}/snrnmais_files/data_files/nl.dat").astype('int')
 nl2 = np.loadtxt(f"efs_{compare2}/snrnmais_files/data_files/nl.dat").astype('int')
