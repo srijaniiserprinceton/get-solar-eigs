@@ -14,8 +14,10 @@ current_dir = os.path.dirname(os.path.realpath(__file__))
 package_dir = os.path.dirname(current_dir)
 r = np.loadtxt(f"{package_dir}/r_global.dat")
 
-eftype_list = ["Jesper", "modelS", "gyre_adiabatic", "gyre_nonadiabatic"]
-colors = ["red", "green", "blue", "black"]
+eftype_list = ["Jesper", "Antia", "modelS",
+               "gyre_adiabatic", "gyre_nonadiabatic"]
+colors = ["red", "magenta", "green",
+          "blue", "black"]
 plotlw = 1.0
 
 nl = []
@@ -28,8 +30,10 @@ def get_eigs(n, ell):
     V = []
     for ief, eftype in enumerate(eftype_list):
         idx = nl[ief].tolist().index([n, ell])
-        U.append(np.loadtxt(f"efs_{eftype}/snrnmais_files/eig_files/U{idx}.dat", dtype="complex"))
-        V.append(np.loadtxt(f"efs_{eftype}/snrnmais_files/eig_files/V{idx}.dat", dtype="complex")*np.sqrt(ell*(ell+1)))
+        U.append(np.loadtxt(f"efs_{eftype}/snrnmais_files/eig_files/U{idx}.dat",
+                            dtype="complex"))
+        V.append(np.loadtxt(f"efs_{eftype}/snrnmais_files/eig_files/V{idx}.dat",
+                            dtype="complex")*np.sqrt(ell*(ell+1)))
     return U, V
 
 
