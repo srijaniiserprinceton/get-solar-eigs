@@ -76,4 +76,3 @@ if __name__ == "__main__":
     ell = ARGS.ell
     fig = plot_eigs(n, ell)
     fig.show()
-    

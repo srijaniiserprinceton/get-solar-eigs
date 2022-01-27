@@ -13,7 +13,6 @@ setup:
 	@rm /scratch/g.samarth/get-solar-eigs/efs_Antia/a.out
 	@python /scratch/g.samarth/get-solar-eigs/efs_Antia/mince_eig.py
 	@mv *.dat /scratch/g.samarth/get-solar-eigs/efs_Antia/snrnmais_files/data_files/.
-	@mv /scratch/g.samarth/get-solar-eigs/efs_Antia/data/w_s /scratch/g.samarth/get-solar-eigs/efs_Antia/snrnmais_files/data_files/.
 	@rm -rf /scratch/g.samarth/get-solar-eigs/efs_Antia/dlfiles
 	@rm /scratch/g.samarth/get-solar-eigs/efs_Antia/snrnmais_files/data_files/eigU.dat
 	@rm /scratch/g.samarth/get-solar-eigs/efs_Antia/snrnmais_files/data_files/eigV.dat
