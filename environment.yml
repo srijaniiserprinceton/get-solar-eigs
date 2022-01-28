@@ -6,11 +6,9 @@ dependencies:
   - python>=3.7
   - numpy
   - scipy
-  - ipython
   - matplotlib
   - astropy
-  - sympy
   - pip
-  - emcee
-  - py3nj
-  - wigner
+  - tqdm
+  - pip:
+    - pygyre

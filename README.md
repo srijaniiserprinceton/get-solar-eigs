@@ -18,24 +18,33 @@ The eigenfunctions (scaled or unscaled) are stored after normalization. This mea
 ## How to use the package
 
 Open the terminal and go to your local directory where you want to clone the repository and use ```git clone``` as follows
-```
+```bash
 git clone https://github.com/srijaniiserprinceton/get-solar-eigs.git
 ```
 Enter the directory ```get-solar-eigs```
-```
+```bash
 cd get-solar-eigs
 ```
 We recommend creating the ```helio``` environment from the ```environment.yml``` (incase all the dependencies are not already in your current conda environment), 
-```
+```bash
 conda env create -f environment.yml
 conda activate helio
 ```
-Depending on whether you want to use HMA or JS eigenfunction and eigenfrequencies you should choose ```efs_Antia``` or ```efs_jesper``` respectively. Lets say you choose ```efs_Antia```. In that case, simply enter the directory ```efs_Antia``` and run the python code ```make_config.py``` as follows
-```
-cd efs_Antia
+After all the dependencies have been installed in the environment, simply run the ```make_config.py``` file using
+```python
 python make_config.py
 ```
-A prompt asking for a preferential location for storing the final data files will be asked. The default location will be chosen as the current working directory. 
+A prompt will ask which set of eigenfunctions you want to use.
+
+```bash
+Select eigenfunctions (default 0): Enter
+0 - Jesper
+1 - Antia
+2 - ModelS (adiabatic)
+3 - GYRE-model (adiabatic)
+4 - GYRE-model (nonadiabatic)
+```
+After, making a selection (say 0), a prompt asking for a preferential location for storing the final data files will be asked. The default location will be chosen as the current working directory. 
 ```
 Enter location to store the eigenfunctions and output files:Default: /home/sbdas/Research/Helioseismology/get-solar-eigs/efs_Jesper --
 ```
@@ -55,4 +64,4 @@ These will take around 5-7 minutes to finish the extraction of the (A) SNRNMAIS 
 * Fortran version used: GNU Fortran 7.4.0
 * IDL 8.6.1 (to be made optional)
 
-***CAUTION: Running this code will generate data files of cumulative size ~ 2.5GB***
+***CAUTION: Running this code will generate data files of cumulative size ~ 5GB***
