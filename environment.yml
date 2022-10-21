@@ -1,4 +1,4 @@
-name: helio
+name: heliopy
 channels:
   - conda-forge
   - defaults

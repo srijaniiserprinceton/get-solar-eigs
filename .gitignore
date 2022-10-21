@@ -5,6 +5,7 @@ eig_files
 __pycache__
 .DS_Store
 .config
+*.dat
 efs_*/data/w_s
 efs_*/makefile
 dlfiles

@@ -10,7 +10,7 @@ gvar = GV.globalVars()
 OM = gvar.OM #importing normalising frequency value from file (in Hz (cgs))
 r = np.loadtxt(f'{gvar.snrnmais}/data_files/r.dat')
 
-w_file = np.loadtxt(f'../w_samarth.dat')
+w_file = np.loadtxt(f'{gvar.datadir}/w_s/w_samarth.dat')
 
 r_w = (w_file)[0]
 w_1 = -(w_file)[1]
